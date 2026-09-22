@@ -1,7 +1,9 @@
 import type { FastifyPluginAsync } from 'fastify';
+
 import type { Prisma } from '../generated/prisma/client.js';
 
 import { prisma } from '../prisma.js';
+import { mapProductImages } from '../utils/productResponse.js';
 
 interface ProductParams {
 	slug: string;
@@ -12,7 +14,6 @@ interface ProductQuery {
 	category?: string;
 	color?: string;
 	size?: string;
-
 	search?: string;
 
 	sort?: 'newest' | 'oldest' | 'price-asc' | 'price-desc' | 'name-asc';
@@ -114,6 +115,13 @@ export const productsRoutes: FastifyPluginAsync = async (app) => {
 
 				include: {
 					category: true,
+
+					images: {
+						orderBy: {
+							position: 'asc',
+						},
+					},
+
 					variants: true,
 				},
 
@@ -131,7 +139,11 @@ export const productsRoutes: FastifyPluginAsync = async (app) => {
 		const totalPages = Math.ceil(total / itemsPerPage);
 
 		return {
-			data: products,
+			data: products.map((product) => ({
+				...product,
+
+				images: mapProductImages(product.images),
+			})),
 
 			pagination: {
 				page: currentPage,
@@ -199,6 +211,13 @@ export const productsRoutes: FastifyPluginAsync = async (app) => {
 
 			include: {
 				category: true,
+
+				images: {
+					orderBy: {
+						position: 'asc',
+					},
+				},
+
 				variants: true,
 			},
 		});
@@ -209,6 +228,10 @@ export const productsRoutes: FastifyPluginAsync = async (app) => {
 			});
 		}
 
-		return product;
+		return {
+			...product,
+
+			images: mapProductImages(product.images),
+		};
 	});
 };

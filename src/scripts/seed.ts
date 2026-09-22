@@ -23,6 +23,10 @@ const categories = [
 	},
 ];
 
+function getProductImageUrl(slug: string, position: number) {
+	return `/images/products/${slug}/${slug}-${position + 1}.webp`;
+}
+
 const products = [
 	{
 		name: 'Raw Black T-Shirt',
@@ -35,11 +39,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/raw-black-t-shirt-1.webp',
 				alt: 'Raw Black T-Shirt front view',
 			},
 			{
-				url: '/images/products/raw-black-t-shirt-2.webp',
 				alt: 'Raw Black T-Shirt back view',
 			},
 		],
@@ -82,11 +84,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/classic-white-t-shirt-1.webp',
 				alt: 'Classic White T-Shirt front view',
 			},
 			{
-				url: '/images/products/classic-white-t-shirt-2.webp',
 				alt: 'Classic White T-Shirt back view',
 			},
 		],
@@ -129,11 +129,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/oversized-stone-t-shirt-1.webp',
 				alt: 'Oversized Stone T-Shirt front view',
 			},
 			{
-				url: '/images/products/oversized-stone-t-shirt-2.webp',
 				alt: 'Oversized Stone T-Shirt back view',
 			},
 		],
@@ -170,11 +168,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/essential-blue-t-shirt-1.webp',
 				alt: 'Essential Blue T-Shirt front view',
 			},
 			{
-				url: '/images/products/essential-blue-t-shirt-2.webp',
 				alt: 'Essential Blue T-Shirt back view',
 			},
 		],
@@ -217,11 +213,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/charcoal-gray-t-shirt-1.webp',
 				alt: 'Charcoal Gray T-Shirt front view',
 			},
 			{
-				url: '/images/products/charcoal-gray-t-shirt-2.webp',
 				alt: 'Charcoal Gray T-Shirt back view',
 			},
 		],
@@ -264,11 +258,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/forest-green-t-shirt-1.webp',
 				alt: 'Forest Green T-Shirt front view',
 			},
 			{
-				url: '/images/products/forest-green-t-shirt-2.webp',
 				alt: 'Forest Green T-Shirt back view',
 			},
 		],
@@ -311,11 +303,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/ivory-ribbed-t-shirt-1.webp',
 				alt: 'Ivory Ribbed T-Shirt front view',
 			},
 			{
-				url: '/images/products/ivory-ribbed-t-shirt-2.webp',
 				alt: 'Ivory Ribbed T-Shirt back view',
 			},
 		],
@@ -353,11 +343,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/sage-green-oversized-t-shirt-1.webp',
 				alt: 'Sage Green Oversized T-Shirt front view',
 			},
 			{
-				url: '/images/products/sage-green-oversized-t-shirt-2.webp',
 				alt: 'Sage Green Oversized T-Shirt back view',
 			},
 		],
@@ -400,11 +388,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/slate-gray-muscle-t-shirt-1.webp',
 				alt: 'Slate Gray Muscle T-Shirt front view',
 			},
 			{
-				url: '/images/products/slate-gray-muscle-t-shirt-2.webp',
 				alt: 'Slate Gray Muscle T-Shirt back view',
 			},
 		],
@@ -447,11 +433,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/essential-hoodie-1.webp',
 				alt: 'Essential Hoodie front view',
 			},
 			{
-				url: '/images/products/essential-hoodie-2.webp',
 				alt: 'Essential Hoodie back view',
 			},
 		],
@@ -506,11 +490,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/forest-green-hoodie-1.webp',
 				alt: 'Forest Green Hoodie front view',
 			},
 			{
-				url: '/images/products/forest-green-hoodie-2.webp',
 				alt: 'Forest Green Hoodie back view',
 			},
 		],
@@ -548,11 +530,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/cream-cropped-hoodie-1.webp',
 				alt: 'Cream Cropped Hoodie front view',
 			},
 			{
-				url: '/images/products/cream-cropped-hoodie-2.webp',
 				alt: 'Cream Cropped Hoodie back view',
 			},
 		],
@@ -589,11 +569,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/navy-pullover-hoodie-1.webp',
 				alt: 'Navy Pullover Hoodie front view',
 			},
 			{
-				url: '/images/products/navy-pullover-hoodie-2.webp',
 				alt: 'Navy Pullover Hoodie back view',
 			},
 		],
@@ -636,11 +614,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/white-zip-hoodie-1.webp',
 				alt: 'White Zip Hoodie front view',
 			},
 			{
-				url: '/images/products/white-zip-hoodie-2.webp',
 				alt: 'White Zip Hoodie back view',
 			},
 		],
@@ -677,11 +653,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/charcoal-oversized-hoodie-1.webp',
 				alt: 'Charcoal Oversized Hoodie front view',
 			},
 			{
-				url: '/images/products/charcoal-oversized-hoodie-2.webp',
 				alt: 'Charcoal Oversized Hoodie back view',
 			},
 		],
@@ -724,11 +698,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/black-zip-up-hoodie-1.webp',
 				alt: 'Black Zip-Up Hoodie front view',
 			},
 			{
-				url: '/images/products/black-zip-up-hoodie-2.webp',
 				alt: 'Black Zip-Up Hoodie back view',
 			},
 		],
@@ -771,11 +743,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/blush-beige-hoodie-1.webp',
 				alt: 'Blush Beige Hoodie front view',
 			},
 			{
-				url: '/images/products/blush-beige-hoodie-2.webp',
 				alt: 'Blush Beige Hoodie back view',
 			},
 		],
@@ -812,11 +782,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/olive-green-hoodie-1.webp',
 				alt: 'Olive Green Hoodie front view',
 			},
 			{
-				url: '/images/products/olive-green-hoodie-2.webp',
 				alt: 'Olive Green Hoodie back view',
 			},
 		],
@@ -859,11 +827,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/relaxed-fit-jacket-1.webp',
 				alt: 'Relaxed Fit Jacket front view',
 			},
 			{
-				url: '/images/products/relaxed-fit-jacket-2.webp',
 				alt: 'Relaxed Fit Jacket back view',
 			},
 		],
@@ -900,11 +866,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/black-utility-jacket-1.webp',
 				alt: 'Black Utility Jacket front view',
 			},
 			{
-				url: '/images/products/black-utility-jacket-2.webp',
 				alt: 'Black Utility Jacket back view',
 			},
 		],
@@ -941,11 +905,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/denim-everyday-jacket-1.webp',
 				alt: 'Denim Everyday Jacket front view',
 			},
 			{
-				url: '/images/products/denim-everyday-jacket-2.webp',
 				alt: 'Denim Everyday Jacket back view',
 			},
 		],
@@ -982,11 +944,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/white-bomber-jacket-1.webp',
 				alt: 'White Bomber Jacket front view',
 			},
 			{
-				url: '/images/products/white-bomber-jacket-2.webp',
 				alt: 'White Bomber Jacket back view',
 			},
 		],
@@ -1023,11 +983,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/gray-field-jacket-1.webp',
 				alt: 'Gray Field Jacket front view',
 			},
 			{
-				url: '/images/products/gray-field-jacket-2.webp',
 				alt: 'Gray Field Jacket back view',
 			},
 		],
@@ -1064,11 +1022,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/forest-green-jacket-1.webp',
 				alt: 'Forest Green Jacket front view',
 			},
 			{
-				url: '/images/products/forest-green-jacket-2.webp',
 				alt: 'Forest Green Jacket back view',
 			},
 		],
@@ -1105,11 +1061,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/cream-trench-jacket-1.webp',
 				alt: 'Cream Trench Jacket front view',
 			},
 			{
-				url: '/images/products/cream-trench-jacket-2.webp',
 				alt: 'Cream Trench Jacket back view',
 			},
 		],
@@ -1152,11 +1106,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/navy-blue-puffer-jacket-1.webp',
 				alt: 'Navy Blue Puffer Jacket front view',
 			},
 			{
-				url: '/images/products/navy-blue-puffer-jacket-2.webp',
 				alt: 'Navy Blue Puffer Jacket back view',
 			},
 		],
@@ -1199,11 +1151,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/black-leather-look-jacket-1.webp',
 				alt: 'Black Leather-Look Jacket front view',
 			},
 			{
-				url: '/images/products/black-leather-look-jacket-2.webp',
 				alt: 'Black Leather-Look Jacket back view',
 			},
 		],
@@ -1240,11 +1190,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/minimal-black-pants-1.webp',
 				alt: 'Minimal Black Pants front view',
 			},
 			{
-				url: '/images/products/minimal-black-pants-2.webp',
 				alt: 'Minimal Black Pants back view',
 			},
 		],
@@ -1287,11 +1235,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/wide-leg-beige-pants-1.webp',
 				alt: 'Wide Leg Beige Pants front view',
 			},
 			{
-				url: '/images/products/wide-leg-beige-pants-2.webp',
 				alt: 'Wide Leg Beige Pants back view',
 			},
 		],
@@ -1334,11 +1280,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/white-linen-pants-1.webp',
 				alt: 'White Linen Pants front view',
 			},
 			{
-				url: '/images/products/white-linen-pants-2.webp',
 				alt: 'White Linen Pants back view',
 			},
 		],
@@ -1381,11 +1325,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/gray-tapered-pants-1.webp',
 				alt: 'Gray Tapered Pants front view',
 			},
 			{
-				url: '/images/products/gray-tapered-pants-2.webp',
 				alt: 'Gray Tapered Pants back view',
 			},
 		],
@@ -1428,11 +1370,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/navy-cargo-pants-1.webp',
 				alt: 'Navy Cargo Pants front view',
 			},
 			{
-				url: '/images/products/navy-cargo-pants-2.webp',
 				alt: 'Navy Cargo Pants back view',
 			},
 		],
@@ -1475,11 +1415,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/olive-cargo-pants-1.webp',
 				alt: 'Olive Cargo Pants front view',
 			},
 			{
-				url: '/images/products/olive-cargo-pants-2.webp',
 				alt: 'Olive Cargo Pants back view',
 			},
 		],
@@ -1516,11 +1454,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/black-wide-leg-pants-1.webp',
 				alt: 'Black Wide Leg Pants front view',
 			},
 			{
-				url: '/images/products/black-wide-leg-pants-2.webp',
 				alt: 'Black Wide Leg Pants back view',
 			},
 		],
@@ -1563,11 +1499,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/beige-chino-pants-1.webp',
 				alt: 'Beige Chino Pants front view',
 			},
 			{
-				url: '/images/products/beige-chino-pants-2.webp',
 				alt: 'Beige Chino Pants back view',
 			},
 		],
@@ -1610,11 +1544,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/gray-jogger-pants-1.webp',
 				alt: 'Gray Jogger Pants front view',
 			},
 			{
-				url: '/images/products/gray-jogger-pants-2.webp',
 				alt: 'Gray Jogger Pants back view',
 			},
 		],
@@ -1651,11 +1583,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/gray-relaxed-sweatshirt-1.webp',
 				alt: 'Gray Relaxed Sweatshirt front view',
 			},
 			{
-				url: '/images/products/gray-relaxed-sweatshirt-2.webp',
 				alt: 'Gray Relaxed Sweatshirt back view',
 			},
 		],
@@ -1698,11 +1628,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/navy-essential-sweatshirt-1.webp',
 				alt: 'Navy Essential Sweatshirt front view',
 			},
 			{
-				url: '/images/products/navy-essential-sweatshirt-2.webp',
 				alt: 'Navy Essential Sweatshirt back view',
 			},
 		],
@@ -1739,11 +1667,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/cream-everyday-sweatshirt-1.webp',
 				alt: 'Cream Everyday Sweatshirt front view',
 			},
 			{
-				url: '/images/products/cream-everyday-sweatshirt-2.webp',
 				alt: 'Cream Everyday Sweatshirt back view',
 			},
 		],
@@ -1780,11 +1706,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/black-essential-sweatshirt-1.webp',
 				alt: 'Black Essential Sweatshirt front view',
 			},
 			{
-				url: '/images/products/black-essential-sweatshirt-2.webp',
 				alt: 'Black Essential Sweatshirt back view',
 			},
 		],
@@ -1827,11 +1751,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/white-crewneck-sweatshirt-1.webp',
 				alt: 'White Crewneck Sweatshirt front view',
 			},
 			{
-				url: '/images/products/white-crewneck-sweatshirt-2.webp',
 				alt: 'White Crewneck Sweatshirt back view',
 			},
 		],
@@ -1874,11 +1796,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/forest-green-sweatshirt-1.webp',
 				alt: 'Forest Green Sweatshirt front view',
 			},
 			{
-				url: '/images/products/forest-green-sweatshirt-2.webp',
 				alt: 'Forest Green Sweatshirt back view',
 			},
 		],
@@ -1915,11 +1835,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/charcoal-zip-sweatshirt-1.webp',
 				alt: 'Charcoal Zip Sweatshirt front view',
 			},
 			{
-				url: '/images/products/charcoal-zip-sweatshirt-2.webp',
 				alt: 'Charcoal Zip Sweatshirt back view',
 			},
 		],
@@ -1962,11 +1880,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/sage-cropped-sweatshirt-1.webp',
 				alt: 'Sage Cropped Sweatshirt front view',
 			},
 			{
-				url: '/images/products/sage-cropped-sweatshirt-2.webp',
 				alt: 'Sage Cropped Sweatshirt back view',
 			},
 		],
@@ -2003,11 +1919,9 @@ const products = [
 
 		images: [
 			{
-				url: '/images/products/ivory-oversized-sweatshirt-1.webp',
 				alt: 'Ivory Oversized Sweatshirt front view',
 			},
 			{
-				url: '/images/products/ivory-oversized-sweatshirt-2.webp',
 				alt: 'Ivory Oversized Sweatshirt back view',
 			},
 		],
@@ -2070,6 +1984,7 @@ async function main() {
 				images: {
 					create: product.images.map((image, position) => ({
 						...image,
+						url: getProductImageUrl(product.slug, position),
 						position,
 					})),
 				},
