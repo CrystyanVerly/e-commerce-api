@@ -7,10 +7,10 @@ interface ProductImage {
 }
 
 function getAppUrl() {
-	const appUrl = process.env.APP_URL;
+	const appUrl = process.env.RENDER_EXTERNAL_URL ?? process.env.APP_URL;
 
 	if (!appUrl) {
-		throw new Error('APP_URL is not defined');
+		throw new Error('Application URL is not defined');
 	}
 
 	return appUrl.replace(/\/$/, '');

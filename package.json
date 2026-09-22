@@ -6,8 +6,11 @@
 	"main": "index.js",
 	"scripts": {
 		"dev": "tsx watch src/server.ts",
-		"build": "tsc",
-		"start": "node dist/server.js"
+		"build": "prisma generate && tsc",
+		"start": "prisma migrate deploy && prisma db seed && node dist/server.js"
+	},
+	"engines": {
+		"node": "24.x"
 	},
 	"keywords": [],
 	"author": "",
